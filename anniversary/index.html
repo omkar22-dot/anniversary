@@ -1,0 +1,1090 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 6th Love Anniversary ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;700&family=Cormorant+Garamond:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: radial-gradient(ellipse at center, #1a0000 0%, #0d0000 40%, #000000 100%);
+            overflow-x: hidden;
+            font-family: 'Cormorant Garamond', serif;
+            position: relative;
+        }
+
+        /* Ambient background glow */
+        .ambient-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            animation: floatGlow 8s ease-in-out infinite;
+        }
+
+        .glow-orb:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 0, 50, 0.15);
+            top: 10%;
+            left: 20%;
+            animation-delay: 0s;
+        }
+
+        .glow-orb:nth-child(2) {
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 215, 0, 0.1);
+            top: 60%;
+            right: 15%;
+            animation-delay: -3s;
+        }
+
+        .glow-orb:nth-child(3) {
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 105, 135, 0.12);
+            bottom: 20%;
+            left: 10%;
+            animation-delay: -5s;
+        }
+
+        .glow-orb:nth-child(4) {
+            width: 350px;
+            height: 350px;
+            background: rgba(139, 0, 0, 0.1);
+            top: 30%;
+            right: 30%;
+            animation-delay: -2s;
+        }
+
+        @keyframes floatGlow {
+            0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+            50% { transform: translate(30px, -20px) scale(1.1); opacity: 1; }
+        }
+
+        /* Floating Hearts */
+        .hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            animation: floatHeart linear infinite;
+            opacity: 0;
+        }
+
+        @keyframes floatHeart {
+            0% { transform: translateY(0) rotate(0deg) scale(0.5); opacity: 0; }
+            10% { opacity: 0.8; }
+            90% { opacity: 0.6; }
+            100% { transform: translateY(-100vh) rotate(360deg) scale(1); opacity: 0; }
+        }
+
+        /* Rose Petals */
+        .petals-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .petal {
+            position: absolute;
+            top: -50px;
+            width: 15px;
+            height: 20px;
+            background: radial-gradient(ellipse at center, #ff4466, #cc0033);
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(45deg);
+            animation: fallPetal linear infinite;
+            opacity: 0;
+            box-shadow: 0 0 5px rgba(255, 68, 102, 0.3);
+        }
+
+        @keyframes fallPetal {
+            0% { transform: translateX(0) rotate(45deg) scale(0.8); opacity: 0; }
+            10% { opacity: 0.7; }
+            100% { transform: translateX(100px) translateY(100vh) rotate(405deg) scale(0.4); opacity: 0; }
+        }
+
+        /* Sparkles */
+        .sparkles-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 2;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #ffd700;
+            border-radius: 50%;
+            animation: sparkleAnim 2s ease-in-out infinite;
+            box-shadow: 0 0 6px #ffd700, 0 0 12px #ffd700;
+        }
+
+        @keyframes sparkleAnim {
+            0%, 100% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1); opacity: 1; }
+        }
+
+        /* Candle flames */
+        .candles-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 150px;
+            pointer-events: none;
+            z-index: 1;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            padding: 0 5% 20px;
+        }
+
+        .candle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .flame {
+            width: 12px;
+            height: 26px;
+            background: radial-gradient(ellipse at bottom, #ffd700, #ff6600, transparent);
+            border-radius: 50% 50% 20% 20%;
+            animation: flicker 0.5s ease-in-out infinite alternate;
+            box-shadow: 0 0 15px #ffd700, 0 0 30px #ff6600, 0 0 50px rgba(255, 100, 0, 0.3);
+            margin-bottom: 2px;
+        }
+
+        .candle-body {
+            width: 7px;
+            height: 50px;
+            background: linear-gradient(to bottom, #fff5e6, #ffe4b5);
+            border-radius: 2px;
+            box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+        }
+
+        @keyframes flicker {
+            0% { transform: scaleY(1) scaleX(1) rotate(-1deg); }
+            100% { transform: scaleY(1.15) scaleX(0.85) rotate(1deg); }
+        }
+
+        /* Couple Silhouette */
+        .couple-silhouette {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 280px;
+            height: 380px;
+            z-index: 1;
+            opacity: 0.12;
+        }
+
+        .couple-silhouette svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Main Content */
+        .main-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 40px 20px 120px;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Entrance animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.2s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Decorative top */
+        .decorative-top {
+            font-size: 36px;
+            margin-bottom: 5px;
+            animation: pulse 2s ease-in-out infinite;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        /* Anniversary number */
+        .anniversary-number {
+            font-family: 'Great Vibes', cursive;
+            font-size: 130px;
+            color: transparent;
+            background: linear-gradient(135deg, #ffd700, #ffaa00, #ffd700, #fff5cc, #ffd700);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 25px rgba(255, 215, 0, 0.5));
+            line-height: 1;
+            margin-bottom: 0;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Main heading */
+        .main-heading {
+            font-family: 'Great Vibes', cursive;
+            font-size: 54px;
+            color: transparent;
+            background: linear-gradient(135deg, #ffd700, #ffcc00, #fff5cc, #ffd700);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 4s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(255, 215, 0, 0.4));
+            margin-bottom: 5px;
+            margin-top: 0;
+            line-height: 1.3;
+        }
+
+        .sub-heading {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            color: #ffb3c1;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        /* Glowing center message */
+        .glow-message {
+            position: relative;
+            padding: 35px 30px;
+            margin: 10px auto;
+            max-width: 720px;
+            width: 100%;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(10px);
+            animation: glowPulse 3s ease-in-out infinite;
+        }
+
+        .glow-message::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: 22px;
+            background: linear-gradient(45deg, #ffd700, #ff4466, #ffd700, #ff69b4, #ffd700);
+            background-size: 400% 400%;
+            animation: borderGlow 4s ease-in-out infinite;
+            z-index: -1;
+            filter: blur(6px);
+            opacity: 0.7;
+        }
+
+        @keyframes glowPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.2), inset 0 0 20px rgba(255, 215, 0, 0.05); }
+            50% { box-shadow: 0 0 50px rgba(255, 215, 0, 0.4), inset 0 0 30px rgba(255, 215, 0, 0.1); }
+        }
+
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .glow-message h1 {
+            font-family: 'Great Vibes', cursive;
+            font-size: 50px;
+            color: transparent;
+            background: linear-gradient(135deg, #ffd700, #fff5cc, #ffd700, #ffaa00);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.5));
+            line-height: 1.4;
+        }
+
+        /* Love quotes */
+        .quotes-section {
+            margin-top: 5px;
+            width: 100%;
+            max-width: 650px;
+        }
+
+        .love-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 28px;
+            color: #ffb3c1;
+            font-style: italic;
+            margin: 10px 0;
+            padding: 15px 30px;
+            border-left: 3px solid rgba(255, 215, 0, 0.5);
+            text-align: left;
+            opacity: 0;
+            animation: fadeInQuote 1.5s ease-out forwards;
+            text-shadow: 0 0 10px rgba(255, 179, 193, 0.3);
+        }
+
+        .love-quote:nth-child(1) { animation-delay: 0.3s; }
+        .love-quote:nth-child(2) { animation-delay: 0.6s; }
+        .love-quote:nth-child(3) { animation-delay: 0.9s; }
+        .love-quote:nth-child(4) { animation-delay: 1.2s; }
+
+        @keyframes fadeInQuote {
+            0% { opacity: 0; transform: translateX(-20px); }
+            100% { opacity: 1; transform: translateX(0); }
+        }
+
+        /* Decorative divider */
+        .divider {
+            margin: 35px auto;
+            width: 220px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #ffd700, transparent);
+            position: relative;
+        }
+
+        .divider::after {
+            content: '💕';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+            background: #000;
+            padding: 0 10px;
+        }
+
+        /* Footer message */
+        .footer-message {
+            margin-top: 5px;
+            font-family: 'Great Vibes', cursive;
+            font-size: 34px;
+            color: #ffd700;
+            opacity: 0.85;
+            filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.3));
+        }
+
+        .footer-hearts {
+            font-size: 28px;
+            margin-top: 15px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        /* Music toggle */
+        .music-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.7);
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 22px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .music-toggle:hover {
+            background: rgba(255, 215, 0, 0.2);
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .anniversary-number { font-size: 90px; }
+            .main-heading { font-size: 38px; }
+            .sub-heading { font-size: 16px; letter-spacing: 2px; }
+            .glow-message h1 { font-size: 34px; }
+            .glow-message { padding: 30px 20px; }
+            .love-quote { font-size: 22px; padding: 12px 20px; }
+            .footer-message { font-size: 26px; }
+            .couple-silhouette { width: 200px; height: 260px; }
+            .candles-container { height: 100px; }
+            .candle-body { height: 35px; }
+        }
+
+        @media (max-width: 480px) {
+            .anniversary-number { font-size: 70px; }
+            .main-heading { font-size: 30px; }
+            .glow-message h1 { font-size: 26px; }
+            .decorative-top { font-size: 28px; }
+            .love-quote { font-size: 18px; }
+        }
+
+        /* Hero Image Section - Full Page Cover */
+        .hero-image-section {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            margin-left: calc(-50vw + 50%);
+            margin-bottom: 60px;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 40px 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+            text-align: center;
+        }
+
+        .blessing-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .blessing-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 32px;
+            color: #ffd700;
+            margin-bottom: 8px;
+            text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+        }
+
+        .blessing-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            color: #ffb3c1;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* Shiv Parvati Quotes */
+        .shiv-parvati-quotes {
+            margin: 30px 0;
+            width: 100%;
+            max-width: 650px;
+            padding: 30px;
+            background: rgba(255, 215, 0, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        .divine-quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            color: #ffe4b5;
+            text-align: center;
+            margin: 18px 0;
+            padding: 12px 20px;
+            line-height: 1.6;
+            opacity: 0;
+            animation: fadeInQuote 1.5s ease-out forwards;
+            text-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+        }
+
+        .divine-quote:nth-child(1) { animation-delay: 1.5s; }
+        .divine-quote:nth-child(2) { animation-delay: 2.2s; }
+        .divine-quote:nth-child(3) { animation-delay: 2.9s; }
+
+        /* Quote Image (couple_4) */
+        .quote-image-wrapper {
+            width: 100%;
+            max-width: 650px;
+            margin: 5px auto;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.15);
+            animation: quoteImagePulse 4s ease-in-out infinite;
+            transition: transform 0.4s ease;
+        }
+
+        .quote-image-wrapper:hover {
+            transform: scale(1.02);
+        }
+
+        .quote-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        @keyframes quoteImagePulse {
+            0%, 100% { box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.15); }
+            50% { box-shadow: 0 10px 45px rgba(0, 0, 0, 0.5), 0 0 35px rgba(255, 105, 180, 0.25); }
+        }
+
+        /* Couple Gallery - Three photos side by side */
+        .couple-gallery {
+            display: flex;
+            gap: 12px;
+            width: 100%;
+            max-width: 850px;
+            margin: 20px 0;
+            justify-content: center;
+            align-items: stretch;
+        }
+
+        .gallery-photo {
+            flex: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(255, 215, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .gallery-photo:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 215, 0, 0.3);
+        }
+
+        .gallery-photo img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-photo:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Responsive for hero */
+        @media (max-width: 768px) {
+            .blessing-title { font-size: 26px; }
+            .divine-quote { font-size: 17px; }
+            .meetup-text { font-size: 20px; }
+            .meetup-image { max-height: 450px; }
+            .gallery-photo img { height: 180px; }
+            .couple-gallery { gap: 8px; }
+        }
+
+        @media (max-width: 480px) {
+            .blessing-title { font-size: 22px; }
+            .blessing-subtitle { font-size: 15px; }
+            .divine-quote { font-size: 15px; padding: 8px 12px; }
+            .meetup-text { font-size: 17px; padding: 15px; }
+            .meetup-image { max-height: 350px; }
+            .gallery-photo img { height: 130px; }
+            .couple-gallery { gap: 6px; }
+            .gallery-photo { border-radius: 8px; }
+        }
+
+        /* First Meetup Section */
+        .meetup-section {
+            margin: 50px 0;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .meetup-quote {
+            margin-bottom: 30px;
+        }
+
+        .meetup-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: #ffb3c1;
+            line-height: 1.6;
+            padding: 20px;
+            text-align: center;
+            font-style: italic;
+            opacity: 0;
+            animation: meetupTextIn 2s ease-out forwards;
+            text-shadow: 0 0 10px rgba(255, 179, 193, 0.3);
+        }
+
+        @keyframes meetupTextIn {
+            0% { opacity: 0; transform: translateY(20px); letter-spacing: 2px; }
+            100% { opacity: 1; transform: translateY(0); letter-spacing: 0px; }
+        }
+
+        /* 6 Years Journey Quote */
+        .journey-quote {
+            margin: 25px 0 15px;
+            text-align: center;
+            max-width: 700px;
+            width: 100%;
+        }
+
+        .journey-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #ffe4b5;
+            font-style: italic;
+            line-height: 1.6;
+            padding: 15px 20px;
+            opacity: 0;
+            animation: journeyFadeIn 2s ease-out forwards;
+            text-shadow: 0 0 8px rgba(255, 228, 181, 0.2);
+        }
+
+        @keyframes journeyFadeIn {
+            0% { opacity: 0; transform: scale(0.95); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Center photo highlight */
+        .gallery-photo-center {
+            transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.25);
+        }
+
+        .gallery-photo-center:hover {
+            transform: translateY(-5px) scale(1.07);
+        }
+
+        /* Final Image */
+        .final-image-wrapper {
+            width: 100%;
+            max-width: 550px;
+            border-radius: 14px;
+            overflow: hidden;
+            margin: 15px 0 0 0;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 215, 0, 0.15);
+        }
+
+        .final-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .meetup-image-wrapper {
+            position: relative;
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 215, 0, 0.15);
+            animation: meetupFloat 5s ease-in-out infinite;
+        }
+
+        .meetup-image {
+            width: 100%;
+            max-height: 550px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .meetup-image-wrapper:hover .meetup-image {
+            transform: scale(1.03);
+        }
+
+        .meetup-image-wrapper::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 16px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            pointer-events: none;
+            box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes meetupFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        /* Page entrance */
+        .page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: loaderFade 1s ease-out 2.5s forwards;
+        }
+
+        .loader-heart {
+            font-size: 60px;
+            animation: loaderPulse 0.8s ease-in-out infinite;
+        }
+
+        .loader-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 28px;
+            color: #ffd700;
+            margin-top: 20px;
+            opacity: 0.8;
+        }
+
+        .loader-anniversary {
+            font-family: 'Great Vibes', cursive;
+            font-size: 36px;
+            margin-top: 18px;
+            opacity: 0;
+            animation: loaderAnniversaryIn 1.5s ease-out 0.8s forwards;
+            background: linear-gradient(135deg, #ff69b4, #ffd700, #ff69b4, #fff5cc);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-align: center;
+            padding: 0 20px;
+            filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.5));
+        }
+
+        @keyframes loaderAnniversaryIn {
+            0% { opacity: 0; transform: translateY(15px) scale(0.9); }
+            100% { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes loaderPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+
+        @keyframes loaderFade {
+            0% { opacity: 1; visibility: visible; }
+            100% { opacity: 0; visibility: hidden; pointer-events: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-heart">❤️</div>
+        <div class="loader-text">With Love...</div>
+        <div class="loader-anniversary">Happy 6th Love Anniversary My Bacchha</div>
+    </div>
+
+    <!-- Ambient Glow -->
+    <div class="ambient-glow">
+        <div class="glow-orb"></div>
+        <div class="glow-orb"></div>
+        <div class="glow-orb"></div>
+        <div class="glow-orb"></div>
+    </div>
+
+    <!-- Floating Hearts -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Rose Petals -->
+    <div class="petals-container" id="petalsContainer"></div>
+
+    <!-- Sparkles -->
+    <div class="sparkles-container" id="sparklesContainer"></div>
+
+    <!-- Candles -->
+    <div class="candles-container">
+        <div class="candle"><div class="flame"></div><div class="candle-body"></div></div>
+        <div class="candle"><div class="flame"></div><div class="candle-body"></div></div>
+        <div class="candle"><div class="flame"></div><div class="candle-body"></div></div>
+        <div class="candle"><div class="flame"></div><div class="candle-body"></div></div>
+        <div class="candle"><div class="flame"></div><div class="candle-body"></div></div>
+        <div class="candle"><div class="flame"></div><div class="candle-body"></div></div>
+        <div class="candle"><div class="flame"></div><div class="candle-body"></div></div>
+        <div class="candle"><div class="flame"></div><div class="candle-body"></div></div>
+    </div>
+
+    <!-- Couple Silhouette -->
+    <div class="couple-silhouette">
+        <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="silGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ffd700;stop-opacity:0.4"/>
+                    <stop offset="100%" style="stop-color:#ff4466;stop-opacity:0.05"/>
+                </linearGradient>
+            </defs>
+            <!-- Male figure -->
+            <ellipse cx="125" cy="95" rx="18" ry="22" fill="url(#silGrad)"/>
+            <path d="M125,117 C105,117 90,140 90,170 L90,280 C90,285 95,290 100,290 L110,290 L110,370 C110,375 113,380 118,380 L132,380 C137,380 140,375 140,370 L140,290 L150,290 C155,290 160,285 160,280 L160,170 C160,140 145,117 125,117 Z" fill="url(#silGrad)"/>
+            <!-- Female figure -->
+            <ellipse cx="175" cy="95" rx="17" ry="21" fill="url(#silGrad)"/>
+            <path d="M175,116 C158,116 148,135 148,155 L148,180 L135,280 C135,285 138,290 143,290 L155,290 L158,370 C158,375 161,380 166,380 L184,380 C189,380 192,375 192,370 L195,290 L207,290 C212,290 215,285 215,280 L202,180 L202,155 C202,135 192,116 175,116 Z" fill="url(#silGrad)"/>
+            <!-- Heart between -->
+            <path d="M150,155 C150,148 144,142 138,142 C132,142 126,148 126,155 C126,168 150,182 150,182 C150,182 174,168 174,155 C174,148 168,142 162,142 C156,142 150,148 150,155 Z" fill="rgba(255,68,102,0.35)"/>
+        </svg>
+    </div>
+
+    <!-- Music Toggle -->
+    <div class="music-toggle" id="musicToggle" title="Play romantic music">🔇</div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+        <!-- Hero Image Section - Full Page Cover -->
+        <div class="hero-image-section fade-in" style="animation-delay: 0.3s;">
+            <img src="Couple.jpeg" alt="Our Beautiful Moment" class="hero-image">
+            <!-- <div class="hero-overlay">
+                <p class="blessing-icon">🙏 🕉️ 🙏</p>
+                <h3 class="blessing-title">Blessed by Shiv & Parvati</h3>
+                <p class="blessing-subtitle">A love as eternal as theirs</p>
+            </div> -->
+        </div>
+
+        <!-- Shiv Parvati Quotes Section -->
+        <div class="shiv-parvati-quotes fade-in" style="animation-delay: 1.2s;">
+            <p class="divine-quote">"Like Shiv found his Shakti in Parvati, I found my everything in you."</p>
+            <p class="divine-quote">"You are the Parvati to my Shiv — together we are complete."</p>
+            <p class="divine-quote">"Our love is blessed by Mahadev — eternal, unbreakable, divine."</p>
+        </div>
+
+        <!-- First Meetup Section -->
+        <div class="meetup-section fade-in" style="animation-delay: 1.6s;">
+            <div class="meetup-quote">
+                <p class="meetup-text">"Our first meetups were short, but every stolen moment was full of love & memories that we carry forever 💕"</p>
+            </div>
+            <div class="meetup-image-wrapper">
+                <img src="Couple_collage.jpeg" alt="Our First Meetups" class="meetup-image">
+            </div>
+        </div>
+
+        <!-- <div class="decorative-top fade-in" style="animation-delay: 2.0s;">✨ 🕊️ ✨</div>
+
+        <div class="anniversary-number fade-in" style="animation-delay: 2.2s;">6th</div>
+
+        <h2 class="main-heading fade-in" style="animation-delay: 2.4s;">Happy 6th Love Anniversary Celebration ❤️</h2> -->
+
+        <p class="sub-heading fade-in" style="animation-delay: 2.5s;">A Journey of Love & Togetherness</p>
+
+        <!-- Three Couple Photos Side by Side -->
+        <div class="couple-gallery fade-in" style="animation-delay: 2.7s;">
+            <div class="gallery-photo">
+                <img src="couple_1.jpeg" alt="Our Moment 1">
+            </div>
+            <div class="gallery-photo">
+                <img src="couple_2.jpeg" alt="Our Moment 2">
+            </div>
+            <div class="gallery-photo">
+                <img src="couple_3.jpeg" alt="Our Moment 3">
+            </div>
+        </div>
+
+        <!-- Mangalsutra Quote -->
+        <div class="journey-quote fade-in" style="animation-delay: 3.3s;">
+            <p class="journey-text">"The first mangalsutra was simple, but the moment was priceless — a thread that tied two souls together forever �"</p>
+        </div>
+
+        <!-- Mangalsutra Photos - couple_7 in middle -->
+        <div class="couple-gallery fade-in" style="animation-delay: 3.5s;">
+            <div class="gallery-photo">
+                <img src="couple_8.jpeg" alt="Our Moment 8">
+            </div>
+            <div class="gallery-photo gallery-photo-center">
+                <img src="couple_7.jpeg" alt="Our Moment 7">
+            </div>
+            <div class="gallery-photo">
+                <img src="couple_9.jpeg" alt="Our Moment 9">
+            </div>
+        </div>
+
+        <!-- Saree Quote -->
+        <div class="journey-quote fade-in" style="animation-delay: 3.6s;">
+            <p class="journey-text">"The saree moments are so special to me — you always wear it just because I love seeing you in one. Thank you for making every drape a memory I'll cherish forever 🥻💕"</p>
+        </div>
+
+        <!-- Saree Photos - couple_11 in middle -->
+        <div class="couple-gallery fade-in" style="animation-delay: 3.8s;">
+            <div class="gallery-photo">
+                <img src="couple_10.jpeg" alt="Our Moment 10">
+            </div>
+            <div class="gallery-photo gallery-photo-center">
+                <img src="couple_11.jpeg" alt="Our Moment 11">
+            </div>
+            <div class="gallery-photo">
+                <img src="couple_12.jpeg" alt="Our Moment 12">
+            </div>
+        </div>
+
+        <!-- 6 Years Journey Quote -->
+        <div class="journey-quote fade-in" style="animation-delay: 4.0s;">
+            <p class="journey-text">"6 beautiful years of love, trust & togetherness — every moment with you feels like a blessing that grows stronger with time 💕"</p>
+        </div>
+
+        <!-- Three More Couple Photos Side by Side -->
+        <div class="couple-gallery fade-in" style="animation-delay: 4.2s;">
+            <div class="gallery-photo">
+                <img src="couple_4.jpeg" alt="Our Moment 4">
+            </div>
+            <div class="gallery-photo">
+                <img src="couple_5.jpeg" alt="Our Moment 5">
+            </div>
+            <div class="gallery-photo">
+                <img src="couple_6.jpeg" alt="Our Moment 6">
+            </div>
+        </div>
+
+        <!-- Final Anniversary Quote -->
+        <div class="journey-quote fade-in" style="animation-delay: 4.3s;">
+            <p class="journey-text">"Once again, Happy Love Anniversary Bacchha 💕 This is just the starting phase — I will give you endless love till my last breath ❤️"</p>
+        </div>
+
+        <!-- Final Image -->
+        <div class="final-image-wrapper fade-in" style="animation-delay: 4.5s;">
+            <img src="couple_13.jpeg" alt="Our Love" class="final-image">
+        </div>
+        <div class="footer-message fade-in" style="animation-delay: 4.7s;">Forever & Always, My Soulmate 💫</div>
+        <div class="footer-hearts fade-in" style="animation-delay: 5s;">❤️ 💕 ❤️ 💕 ❤️</div>
+    </div>
+
+    <!-- Background Audio -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="https://cdn.pixabay.com/audio/2022/01/18/audio_d0a13f69d2.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Floating hearts
+        function createHearts() {
+            const container = document.getElementById('heartsContainer');
+            const hearts = ['❤️', '💕', '💖', '💗', '💓', '♥️', '🤍', '💘'];
+
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.left = Math.random() * 100 + '%';
+                heart.style.fontSize = (Math.random() * 18 + 14) + 'px';
+                heart.style.animationDuration = (Math.random() * 5 + 7) + 's';
+                container.appendChild(heart);
+                setTimeout(() => heart.remove(), 13000);
+            }, 700);
+        }
+
+        // Rose petals
+        function createPetals() {
+            const container = document.getElementById('petalsContainer');
+
+            setInterval(() => {
+                const petal = document.createElement('div');
+                petal.className = 'petal';
+                petal.style.left = Math.random() * 100 + '%';
+                petal.style.animationDuration = (Math.random() * 5 + 8) + 's';
+                petal.style.width = (Math.random() * 10 + 10) + 'px';
+                petal.style.height = (Math.random() * 12 + 14) + 'px';
+                const hue = 340 + Math.random() * 20;
+                petal.style.background = `radial-gradient(ellipse at center, hsl(${hue}, 80%, 60%), hsl(${hue}, 90%, 35%))`;
+                container.appendChild(petal);
+                setTimeout(() => petal.remove(), 15000);
+            }, 1000);
+        }
+
+        // Sparkles
+        function createSparkles() {
+            const container = document.getElementById('sparklesContainer');
+
+            setInterval(() => {
+                const sparkle = document.createElement('div');
+                sparkle.className = 'sparkle';
+                sparkle.style.left = Math.random() * 100 + '%';
+                sparkle.style.top = Math.random() * 100 + '%';
+                sparkle.style.animationDuration = (Math.random() * 2 + 1.5) + 's';
+                const size = Math.random() * 4 + 2;
+                sparkle.style.width = size + 'px';
+                sparkle.style.height = size + 'px';
+                container.appendChild(sparkle);
+                setTimeout(() => sparkle.remove(), 4000);
+            }, 250);
+        }
+
+        // Music control
+        const musicToggle = document.getElementById('musicToggle');
+        const bgMusic = document.getElementById('bgMusic');
+        let isPlaying = false;
+
+        musicToggle.addEventListener('click', () => {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicToggle.textContent = '🔇';
+                isPlaying = false;
+            } else {
+                bgMusic.volume = 0.3;
+                bgMusic.play().then(() => {
+                    musicToggle.textContent = '🎵';
+                    isPlaying = true;
+                }).catch(() => {});
+            }
+        });
+
+        // Start animations on load
+        window.addEventListener('load', () => {
+            createHearts();
+            createPetals();
+            createSparkles();
+        });
+    </script>
+</body>
+</html>
